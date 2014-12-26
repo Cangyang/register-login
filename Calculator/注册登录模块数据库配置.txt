@@ -1,0 +1,14 @@
+1、在源代码目录中找到文件MysqlConnectionConfig.properties，并修改其中的user和password为本地安装的mysql数据库的用户名和密码
+2、本模块只需要一个数据库里的一张表。其中的脚本为：
+create database struts2test1;
+user struts2test1;
+CREATE TABLE `user` (
+  `id` int(10) NOT NULL AUTO_INCREMENT,
+  `username` varchar(20) NOT NULL,
+  `userpass` varchar(100) NOT NULL,
+  `email` varchar(30) DEFAULT NULL,
+  `registertime` datetime DEFAULT NULL,
+  `lastlogintime` datetime DEFAULT NULL,
+  PRIMARY KEY (`username`),
+  UNIQUE KEY `id` (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8
